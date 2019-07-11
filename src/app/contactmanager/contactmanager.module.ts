@@ -8,6 +8,7 @@ import {ContactmanagerRoutingModule} from './contactmanager-routing.module';
 import {MaterialModule} from '../shared/material.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {FormsModule} from '@angular/forms';
+import { NotesComponent } from './components/notes/notes.component';
 
 
 
@@ -16,7 +17,8 @@ import {FormsModule} from '@angular/forms';
     ContactmanagerAppComponent,
     ToolbarComponent,
     MainContentComponent,
-    SidenavComponent],
+    SidenavComponent,
+    NotesComponent],
   imports: [
     CommonModule,
     MaterialModule,
