@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import {BreakpointObserver} from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-sidenav',
@@ -14,7 +14,7 @@ export class SidenavComponent implements OnInit {
   }
 
   isScreenSmall(): boolean {
-    return this.breakpointObserver.isMatched([Breakpoints.Small, Breakpoints.XSmall]);
+    return this.breakpointObserver.isMatched('(max-width: 720px)');
   }
 }
 
