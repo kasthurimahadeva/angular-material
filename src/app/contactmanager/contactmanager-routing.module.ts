@@ -10,6 +10,10 @@ const routes: Routes = [
     component: ContactmanagerAppComponent,
     children: [
       {
+        path: ':id',
+        component: MainContentComponent
+      },
+      {
         path: '',
         component: MainContentComponent
       }
