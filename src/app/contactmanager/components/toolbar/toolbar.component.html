@@ -9,5 +9,7 @@
   </button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item (click)="openAddContactDialog()">New Contact</button>
+    <button mat-menu-item (click)="toggleTheme.emit()">Toggle Theme</button>
+    <button mat-menu-item (click)="toggleDir.emit()">Toggle Direction</button>
   </mat-menu>
 </mat-toolbar>
