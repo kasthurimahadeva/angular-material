@@ -7,7 +7,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import {ContactmanagerRoutingModule} from './contactmanager-routing.module';
 import {MaterialModule} from '../shared/material.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NotesComponent } from './components/notes/notes.component';
 import { NewContactDialogComponent } from './components/new-contact-dialog/new-contact-dialog.component';
 
@@ -26,6 +26,7 @@ import { NewContactDialogComponent } from './components/new-contact-dialog/new-c
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
+    ReactiveFormsModule,
     ContactmanagerRoutingModule
   ],
   entryComponents: [
