@@ -14,6 +14,7 @@ import {MatSidenav} from '@angular/material';
 export class SidenavComponent implements OnInit {
   users: Observable<User[]>;
   isDarkTheme = false;
+  dir = 'ltr';
   // @ts-ignore
   @ViewChild(MatSidenav) sidenav: MatSidenav;
 
@@ -49,6 +50,11 @@ export class SidenavComponent implements OnInit {
 
   toggleTheme() {
     this.isDarkTheme = !this.isDarkTheme;
+  }
+
+  toggleDir() {
+    this.dir = this.dir === 'ltr' ? 'rtl' : 'ltr';
+    this.sidenav.toggle().then(() => this.sidenav.toggle());
   }
 }
 
