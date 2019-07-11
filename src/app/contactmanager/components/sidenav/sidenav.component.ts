@@ -13,6 +13,7 @@ import {MatSidenav} from '@angular/material';
 })
 export class SidenavComponent implements OnInit {
   users: Observable<User[]>;
+  isDarkTheme = false;
   // @ts-ignore
   @ViewChild(MatSidenav) sidenav: MatSidenav;
 
@@ -44,6 +45,10 @@ export class SidenavComponent implements OnInit {
 
   isScreenSmall(): boolean {
     return this.breakpointObserver.isMatched('(max-width: 720px)');
+  }
+
+  toggleTheme() {
+    this.isDarkTheme = !this.isDarkTheme;
   }
 }
 
