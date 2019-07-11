@@ -9,6 +9,7 @@ import {MaterialModule} from '../shared/material.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {FormsModule} from '@angular/forms';
 import { NotesComponent } from './components/notes/notes.component';
+import { NewContactDialogComponent } from './components/new-contact-dialog/new-contact-dialog.component';
 
 
 
@@ -18,13 +19,17 @@ import { NotesComponent } from './components/notes/notes.component';
     ToolbarComponent,
     MainContentComponent,
     SidenavComponent,
-    NotesComponent],
+    NotesComponent,
+    NewContactDialogComponent],
   imports: [
     CommonModule,
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
     ContactmanagerRoutingModule
+  ],
+  entryComponents: [
+    NewContactDialogComponent
   ]
 })
 export class ContactmanagerModule { }
