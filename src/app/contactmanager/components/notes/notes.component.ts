@@ -15,6 +15,11 @@ export class NotesComponent implements OnInit {
   // @ts-ignore
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
+  // tslint:disable-next-line:ban-types
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLocaleLowerCase();
+  }
+
   constructor() { }
 
   ngOnInit() {
