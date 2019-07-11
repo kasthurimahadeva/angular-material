@@ -1,6 +1,6 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {Note} from '../../models/note';
-import {MatPaginator, MatTableDataSource} from '@angular/material';
+import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 
 @Component({
   selector: 'app-notes',
@@ -14,6 +14,8 @@ export class NotesComponent implements OnInit {
   dataSource: MatTableDataSource<Note>;
   // @ts-ignore
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  // @ts-ignore
+  @ViewChild(MatSort) sort: MatSort;
 
   // tslint:disable-next-line:ban-types
   applyFilter(filterValue: string) {
@@ -29,6 +31,7 @@ export class NotesComponent implements OnInit {
   // tslint:disable-next-line:use-lifecycle-interface
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
 }
